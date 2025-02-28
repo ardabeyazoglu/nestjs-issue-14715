@@ -2,7 +2,7 @@
 
 Run `npm i` and `npm run start` to run the app first.
 
-Then send a post request using the code below:
+Open <http://localhost:3000> and send a post request using the code below:
 
 ```typescript
 await fetch("/v1/webhooks", {
