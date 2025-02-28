@@ -1,0 +1,38 @@
+{
+  // editor config
+  "files.eol": "\n",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "editor.indentSize": "tabSize",
+  "editor.tabSize": 2,
+
+  // formatter config
+  "eslint.enable": true,
+  "eslint.debug": true,
+  "eslint.format.enable": true,
+  "eslint.useFlatConfig": true,
+  "eslint.workingDirectories": ["./apps", "./libs"],
+  "[typescript]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
+  "[javascript]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
+
+  "typescript.experimental.expandableHover": true,
+  "typescript.experimental.updateImportsOnPaste": true,
+  //"typescript.tsdk": "node_modules\\typescript\\lib",
+  "vue.server.hybridMode": false,
+
+  // deno config
+  // use nodejs and pure typescript instead of deno to avoid performance and refactoring headaches
+  "deno.enable": true,
+  "deno.config": "./apps/supabase/deno.json",
+  "deno.enablePaths": [
+    "./apps/supabase/functions/_shared", 
+    "./apps/supabase/functions/_tests",
+    "./apps/supabase/*.mts",
+    "./apps/supabase/*.ts"
+  ],
+  "deno.disablePaths": ["./libs"],
+  "deno.importMap": "./apps/supabase/functions/import_map.json",
+  "deno.lint": true
+}
